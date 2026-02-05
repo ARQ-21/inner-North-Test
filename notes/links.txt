@@ -1,0 +1,17 @@
+            <li><a aria-label="pinterest" href="#">
+                <svg class="social-icon">
+                  <use xlink:href="../images/icon-pinterest.svg"></use>
+                </svg>
+              </a></li>
+
+            <li><a aria-label="youtube" href="#">
+                <svg class="social-icon">
+                  <use xlink:href="../images/icon-youtube.svg"></use>
+                </svg>
+              </a></li>
+              
+            <li><a aria-label="twitter" href="#">
+                <svg class="social-icon">
+                  <use xlink:href="../images/icon-twitter.svg"></use>
+                </svg>
+              </a></li>
