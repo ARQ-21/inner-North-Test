@@ -1,0 +1,138 @@
+Carousel thingy for the website
+
+  <link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+  <script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js" defer></script>
+
+
+    <section class="carousel | padding-block-700  text-center">
+      <h2 class="fs-secondary-heading fw-bold">What they've said</h2>
+      <!-- Carousel here -->
+      <ul class="slider">
+        <li>
+          <img src="images/avatar-anisha.png" alt="">
+
+          <div class="slider-content | flow" style="--flow-spacer: 1rem">
+            <h3 class="fw-bold">Anisha Li</h3>
+            <p data-width="wide">“Manage has supercharged our team’s workflow. The ability to maintain visibility on
+              larger milestones at all times keeps
+              everyone motivated.”</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/avatar-ali.png" alt="">
+
+          <div class="slider-content | flow" style="--flow-spacer: 1rem">
+            <h3 class="fw-bold">Ali Bravo</h3>
+            <p data-width="wide">“We have been able to cancel so many other subscriptions since using Manage. There is
+              no
+              more cross-channel
+              confusion
+              and everyone is much more focused.”</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/avatar-richard.png" alt="">
+
+          <div class="slider-content | flow" style="--flow-spacer: 1rem">
+            <h3 class="fw-bold">Richard Watts</h3>
+            <p data-width="wide">“Manage allows us to provide structure and process. It keeps us organized and focused.
+              I
+              can’t stop recommending them to
+              everyone I talk to!” </p>
+          </div>
+        </li>
+        <li>
+          <img src="images/avatar-shanai.png" alt="">
+
+          <div class="slider-content | flow" style="--flow-spacer: 1rem">
+            <h3 class="fw-bold">Shanai Gough</h3>
+            <p data-width="wide">“Their software allows us to track, manage and collaborate on our projects from
+              anywhere.
+              It keeps the whole team
+              in-sync without being intrusive.” </p>
+          </div>
+        </li>
+      </ul>
+      <button class="button">Get Started</button>
+    </section>
+
+
+CSS:
+
+/* slider */
+
+.slider {
+  display: flex;
+  gap: var(--size-600);
+  list-style: none;
+}
+
+.a11y-slider-container {
+  margin-block: var(--size-700);
+  margin-inline: var(--size-400);
+}
+
+.slider > * {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 30em) {
+  .slider {
+    scroll-padding-inline: 25px;
+  }
+
+  .a11y-slider-container {
+    margin-inline: 0;
+  }
+  .slider > * {
+    width: 50%;
+  }
+}
+
+@media (min-width: 50em) {
+  .slider > * {
+    width: 35%;
+  }
+}
+
+.slider-content {
+  border-radius: var(--size-100);
+  padding: var(--size-700) var(--size-600) var(--size-600);
+  background: var(--clr-neutral-200);
+}
+
+.slider img {
+  width: var(--size-800);
+  position: relative;
+  top: calc(var(--size-800) / 2);
+  margin-inline: auto;
+}
+.a11y-slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-block: var(--size-500);
+  gap: var(--size-300);
+}
+.a11y-slider-dots li {
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+}
+
+.a11y-slider-dots li button {
+  display: block;
+  font-size: 0;
+  text-indent: -9999px;
+  background: transparent;
+  border: 1px solid var(--clr-accent-400) !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.a11y-slider-dots li button.active {
+  background: var(--clr-accent-400);
+}
